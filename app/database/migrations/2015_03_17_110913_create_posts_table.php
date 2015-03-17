@@ -16,7 +16,7 @@ class CreatePostsTable extends Migration {
 			$table->increments('id');
 			$table->string('title');
 			$table->text('content');
-			$table->integer('user_id');
+			$table->integer('myuser_id');
 			$table->string('status');
 			$table->integer('comments_count');
 
