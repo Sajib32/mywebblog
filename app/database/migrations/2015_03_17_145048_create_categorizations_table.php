@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCategoriesPostsTable extends Migration {
+class CreateCategorizationsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,7 +12,7 @@ class CreateCategoriesPostsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('categories_posts', function($table){
+		Schema::create('categorizations', function($table){
 			$table->integer('category_id')->unsigned();
 			$table->foreign('category_id')->references('id')->on('categories');
 			$table->integer('post_id')->unsigned();
