@@ -1,0 +1,36 @@
+html { height: 100%; width: 100%;}
+body { width: 980px; margin: auto; padding: auto; }
+body table { width: 100%; border-collapse: collapse; }
+table tr td, table tr th { vertical-align: top; }
+th { text-align: left; }
+h1 { text-align: center; font-family: Georgia, Times, serif; }
+h2 { font-family: Georgia, Times, serif; margin-bottom: 1em; }
+.row1 {background: #DDDDDD; }
+.row2 {background: #FFFFFF; }
+
+#header { margin: 0; padding: .5em; height: 70px; font-size: 1.2em;
+		  background: #004080; color: #FFFFFF; clear: both; }
+.notice { height: 2em; color: #800000; border: 2px solid #800000;
+		  padding: .5em 1em 0 1em; font-weight: bold; }
+#pagecontent { min-height: 400px; }
+#footer {margin: 3em 0 0 0; padding: .5em; height: 50px; text-align: center;
+		 background: #004080; color: #FFFFFF; clear: both; }
+
+#header h1 { margin: 0; padding: .25em; }
+#pagecontent h1 { color: #800000; }
+a, a:visited { color: #800000; }
+a:hover { background: #CCCCCC; }
+
+
+/* Errors */
+.fieldWithErrors { }
+.fieldWithErrors label { color: #AA0000; }
+.fieldWithErrors input { }
+#errorExplanation { width: 400px; padding: 0; margin: 0 auto 1.5em; 
+  border: 1px solid #AA0000; background-color: #FFFFFF; font-size: 12px; }
+#errorExplanation h2 { font-weight: bold; font-size: 12px;
+  padding: 5px 5px 5px 15px; margin: 0; width: 380px;
+  background-color: #AA0000; color: #FFFFFF; }
+#errorExplanation p { color: #333333; margin: 0; padding: 3px 0.5em; }
+#errorExplanation ul { margin-top: 0; }
+#errorExplanation ul li { list-style: square; }

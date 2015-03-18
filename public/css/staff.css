@@ -1,0 +1,32 @@
+/* This is the stylesheet for the staff area */
+/* It is intended to be supplemental to sblog.css */
+
+.menu { margin-left: 375px; margin-top: 3em; }
+
+.categorylist { width: 200px; height: 380px;
+	border: 1px solid #000000; }
+.categorylist h2 { font-size: 16px; margin: 0; padding: 6px; 
+	border-bottom: 1px solid #000000; }
+
+.userlist { height: 40em; margin: 0 0 3em 10px; }
+.userlist .listing { border: 1px solid #000000; height: 40em; }
+.userlist.left { float: left; width: 480px; }
+.userlist.right { float: right; width: 430px; }
+
+.comment{ padding: .5em 1em .5em 1em; }
+.comment-lead{ font-size: .75em; }
+.comment-text{ padding: .5em .5em 1em .5em; }
+
+
+/* Errors */
+.fieldWithErrors { }
+.fieldWithErrors label { color: #AA0000; }
+.fieldWithErrors input { }
+#errorExplanation { width: 400px; padding: 0; margin: 0 auto 1.5em; 
+  border: 1px solid #AA0000; background-color: #FFFFFF; font-size: 12px; }
+#errorExplanation h2 { font-weight: bold; font-size: 12px;
+  padding: 5px 5px 5px 15px; margin: 0; width: 380px;
+  background-color: #AA0000; color: #FFFFFF; }
+#errorExplanation p { color: #333333; margin: 0; padding: 3px 0.5em; }
+#errorExplanation ul { margin-top: 0; }
+#errorExplanation ul li { list-style: square; }

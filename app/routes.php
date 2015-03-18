@@ -11,7 +11,12 @@
 |
 */
 
-Route::get('/', function()
+Route::get('/main', function()
 {
-	return View::make('hello');
+	return View::make('main.main');
+});
+
+Route::get('/staff/menu', function()
+{
+	return View::make('staff.menu');
 });
