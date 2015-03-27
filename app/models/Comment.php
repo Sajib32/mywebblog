@@ -1,9 +1,12 @@
 <?php
 
 class Comment extends Eloquent {
+    protected $table = 'comments';
 
-	public function post()
-	{
-		return $this->belongsTo('Post');
-	}
+    protected $fillable = ['author_id', 'post_id', 'content', 'status'];
+
+    public function post()
+    {
+    	return $this->belongsTo('Post');
+    }
 }

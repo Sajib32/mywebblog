@@ -20,3 +20,8 @@ Route::get('/staff/menu', function()
 {
 	return View::make('staff.menu');
 });
+
+Route::get('/posts/new', function()
+{
+	return View::make('posts.new');
+});

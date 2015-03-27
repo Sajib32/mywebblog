@@ -1,24 +1,27 @@
 <?php
 
 class Post extends Eloquent {
+    protected $table = 'posts';
 
-	public function comments()
-	{
-		return $this->hasMany('Comment');
-	}
+    protected $fillable = ['author_id', 'title', 'content', 'status', 'comments_count'];
 
-	public function myusers()
-	{
-		return $this->belongsTo('MyUser', 'myuser_id');
-	}
+    public function author()
+    {
+    	return $this->belongsTo('Author', 'author_id')
+    }
 
-	public function categorizations()
-	{
-		return $this->hasMany('Categorization');
-	}
+    public function comments()
+    {
+    	return $this->hasMany('Comment');
+    }
 
-	public function caterogies()
-	{
-		return $this->hasManyThrough('Category', 'Categorization');
-	}
+    public function categories_posts()
+    {
+    	return $this->hasMany('CategoriesPost');
+    }
+
+    public function categories()
+    {
+    	return $this->hasManyThrough('Categories', 'categoriesPost');
+    }
 }

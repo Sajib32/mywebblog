@@ -12,19 +12,17 @@ class CreateCommentsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('comments', function($table){ 
-			$table->integer('post_id')->unsigned();
-			$table->foreign('post_id')->references('id')->on('posts');
-			$table->increments('id');
-			$table->string('author');
-			$table->string('author_email');
+		Schema::create('comments', function($table)
+		{
+			$table->increments('id')->unsigned();
+			$table->integer('author_id')->unsigned()->index();
+			$table->integer('post_id')->unsigned()->index();
 			$table->text('content');
 			$table->string('status');
-
 			$table->timestamps();
+			$table->foreign('author_id')->references('id')->on('authors')->onDelete('cascade');
+			$table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
 		});
-
-		
 	}
 
 	/**
@@ -34,7 +32,7 @@ class CreateCommentsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop(comments);
+		Schema::drop('comments');
 	}
 
 }
